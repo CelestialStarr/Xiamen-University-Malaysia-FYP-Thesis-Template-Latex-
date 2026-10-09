@@ -1,0 +1,68 @@
+% Front cover is outside the numbered preliminary pages.
+\thispagestyle{empty}
+\begingroup\coverfont\bfseries\fontsize{18}{20.5}\selectfont\centering
+\vspace*{2.8cm}
+\MakeUppercase{\ThesisTitle}\par
+\vspace{6.3cm}
+\MakeUppercase{\StudentName}\par
+\vfill
+XIAMEN UNIVERSITY MALAYSIA\par
+\vspace{0.4cm}\SubmissionYear\par
+\vspace*{1.7cm}
+\endgroup
+\clearpage\pagenumbering{roman}\thispagestyle{empty}
+\begingroup\singlespacing\centering
+\includegraphics[width=\textwidth]{images/xmum-logo.png}\par
+\vspace{2cm}
+{\fontsize{14}{16}\selectfont FINAL YEAR PROJECT REPORT\par}
+\vspace{3.4cm}
+{\fontsize{16}{18.5}\selectfont\bfseries\MakeUppercase{\ThesisTitle}\par}
+\vspace{4.3cm}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.4cm}@{ : }>{\raggedright\arraybackslash}p{7.5cm}@{}}
+NAME OF STUDENT & \MakeUppercase{\StudentName}\\
+STUDENT ID & \StudentID\\
+SCHOOL/ FACULTY & \SchoolName\\
+PROGRAMME & \MakeUppercase{\ProgrammeName}\\
+INTAKE & \Intake\\[12pt]
+SUPERVISOR & \SupervisorName\\
+ & \SupervisorTitle
+\end{tabular}\par
+\vfill
+{\fontsize{14}{16}\selectfont\MakeUppercase{\SubmissionMonth}\ \SubmissionYear\par}\vspace*{0.6cm}
+\endgroup
+\frontpage{DECLARATION}
+\vspace{3.4cm}
+I hereby declare that this project report is based on my original work except for citations and quotations which have been duly acknowledged. I also declare that it has not been previously and concurrently submitted for any other degree or award at Xiamen University Malaysia or other institutions.
+\par\vspace{3.5cm}
+\begin{tabular}{@{}l@{ : }l}
+Signature & \rule{6cm}{0.4pt}\\
+Name & \StudentName\\
+ID No. & \StudentID\\
+Date & \rule{6cm}{0.4pt}
+\end{tabular}
+\frontpage{APPROVAL FOR SUBMISSION}
+\vspace{3.4cm}
+I certify that this project report entitled ``\textbf{\MakeUppercase{\ThesisTitle}}'' that was prepared by \MakeUppercase{\StudentName} has met the required standard for submission in partial fulfillment of the requirements for the award of \ProgrammeName\ at Xiamen University Malaysia.
+\par\vspace{1cm}Approved by,\par\vspace{0.8cm}
+\begin{tabular}{@{}l@{ : }l}
+Signature & \rule{6cm}{0.4pt}\\
+Supervisor & \SupervisorName\\
+Date & \rule{6cm}{0.4pt}
+\end{tabular}
+% The supplied template excludes copyright from the table of contents.
+\clearpage\vspace*{4.5cm}
+The copyright of this report belongs to the author under the terms of Xiamen University Malaysia copyright policy. Due acknowledgement shall always be made of the use of any material contained in, or derived from, this project report/ thesis.
+\par\vspace{1cm}
+\textcopyright\ \SubmissionYear, \StudentName. All right reserved.
+\frontpage{ACKNOWLEDGEMENTS}
+\vspace{3.4cm}
+\input{frontmatter/acknowledgements}
+\frontpage{ABSTRACT}
+\vspace{3.4cm}
+\input{frontmatter/abstract}
+\thesislists
+\frontpage{LIST OF SYMBOLS / ABBREVIATIONS}
+\vspace{1cm}
+\input{frontmatter/symbols}
+
+

@@ -1,0 +1,26 @@
+\documentclass[12pt,a4paper,oneside,openany]{report}
+\usepackage{xmu-thesis}
+\input{metadata}
+\begin{document}
+\input{frontmatter.tex}
+\clearpage\pagenumbering{arabic}\setlength{\footskip}{0.2cm}
+\addtocontents{toc}{\protect\medskip\protect\noindent CHAPTER\protect\par}
+\input{chapters/01-introduction}
+\input{chapters/02-literature-review}
+\input{chapters/03-methodology}
+\input{chapters/04-results-discussion}
+\input{chapters/05-conclusion}
+\clearpage
+% apacite uses APA 6, as named in the 2025 guideline appendix.
+\begingroup
+\singlespacing
+\phantomsection\addcontentsline{toc}{chapter}{REFERENCES}
+\bibliographystyle{apacite}
+\bibliography{references}
+\endgroup
+\thesisappendix{A}
+\input{appendices/appendix-a}
+\end{document}
+
+
+

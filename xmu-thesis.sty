@@ -1,0 +1,60 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{xmu-thesis}[2026/10/09 XMUM FYP thesis formatting]
+\RequirePackage[a4paper,left=4cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=0.7cm]{geometry}
+\RequirePackage{fontspec}
+% Upload legally obtained Times New Roman / Arial Narrow font files for exact Overleaf fidelity.
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{
+  \IfFileExists{fonts/times.ttf}{\setmainfont{times.ttf}[Path=fonts/,BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf]}{\setmainfont{TeX Gyre Termes}}}
+\IfFontExistsTF{Arial Narrow}{\newfontfamily\coverfont{Arial Narrow}}{
+  \IfFileExists{fonts/ARIALN.TTF}{\newfontfamily\coverfont{ARIALN.TTF}[Path=fonts/,BoldFont=ARIALNB.TTF]}{\newfontfamily\coverfont{TeX Gyre Heros Cn}}}
+\RequirePackage{setspace,graphicx,array,longtable,booktabs,amsmath,amssymb}
+\RequirePackage{titlesec,tocloft,fancyhdr,caption}
+\RequirePackage[natbibapa]{apacite}
+\RequirePackage[hidelinks,hypertexnames=false]{hyperref}
+% Word's 1.5-line setting renders to about 23.5 PDF points for the supplied body font.
+\newcommand{\bodyspacing}{\setstretch{1.626}\fontsize{12}{14.5}\selectfont}
+\AtBeginDocument{\bodyspacing}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}\fancyhf{}
+\fancyfoot[C]{\fontsize{10.5}{12}\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\fontsize{10.5}{12}\selectfont\thepage}\renewcommand{\headrulewidth}{0pt}}
+\titleformat{\chapter}[display]{\normalfont\fontsize{12}{14.5}\selectfont\bfseries\centering}{CHAPTER \thechapter}{23.15pt}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-21pt}{23.15pt}
+\titleformat{\section}{\normalfont\fontsize{12}{14.5}\selectfont\bfseries}{\thesection}{0.4em}{}
+\titleformat{\subsection}{\normalfont\fontsize{12}{14.5}\selectfont\bfseries}{\thesubsection}{0.4em}{}
+\titlespacing*{\section}{0pt}{23.5pt}{0pt}
+\titlespacing*{\subsection}{0pt}{23.5pt}{0pt}
+\setcounter{secnumdepth}{2}\setcounter{tocdepth}{2}
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\listtablename}{LIST OF TABLES}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\cftchapfont}{\bfseries}\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftnodots}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftnodots}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftnodots}}
+\renewcommand{\cftfigleader}{\cftdotfill{\cftnodots}}
+\renewcommand{\cfttableader}{\cftdotfill{\cftnodots}}
+\setlength{\cftbeforechapskip}{10pt}
+\renewcommand{\cftfigpresnum}{Figure }\renewcommand{\cftfigaftersnum}{: }
+\renewcommand{\cfttabpresnum}{Table }\renewcommand{\cfttabaftersnum}{: }
+\setlength{\cftfignumwidth}{2.5cm}\setlength{\cfttabnumwidth}{2.5cm}
+\captionsetup{font=normalsize,labelfont=normalfont,labelsep=colon,justification=centering}
+\captionsetup[table]{position=top}
+\renewcommand{\bibname}{REFERENCES}
+\setlength{\bibleftmargin}{0.5in}\setlength{\bibindent}{-0.5in}
+\setlength{\bibitemsep}{12pt}\setlength{\bibparsep}{0pt}\setlength{\bibhang}{0.5in}
+\newcommand{\frontheading}[1]{\begin{center}\bfseries #1\end{center}}
+\newcommand{\frontpage}[1]{\clearpage\phantomsection\addcontentsline{toc}{chapter}{#1}\frontheading{#1}}
+\newcommand{\thesischapter}[1]{\uppercase{\chapter{#1}}\thispagestyle{empty}}
+\newcommand{\thesisappendix}[1]{\clearpage\phantomsection\addcontentsline{toc}{chapter}{APPENDIX #1}\frontheading{APPENDIX #1}}
+\newcommand{\thesislists}{%
+  \frontpage{TABLE OF CONTENTS}\begingroup\setstretch{1.1}\csname @starttoc\endcsname{toc}\endgroup
+  \frontpage{LIST OF TABLES}\begingroup\setstretch{1.1}\csname @starttoc\endcsname{lot}\endgroup
+  \frontpage{LIST OF FIGURES}\begingroup\setstretch{1.1}\csname @starttoc\endcsname{lof}\endgroup}
+
+
+
+
