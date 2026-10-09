@@ -1,4 +1,4 @@
-# Xiamen-University-Malaysia-FYP-Thesis-Template-Latex-
+# Xiamen-University-Malaysia-FYP-Thesis-Template-Latex
 # XMUM FYP LaTeX Template
 
 A LaTeX template based on the September 2026 Xiamen University Malaysia Final Year Project thesis template.
